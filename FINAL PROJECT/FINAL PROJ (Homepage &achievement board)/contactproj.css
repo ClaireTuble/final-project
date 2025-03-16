@@ -1,0 +1,262 @@
+/* Outside body-background */
+body {
+    
+    background-image: url('background2.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.logo {
+    object-fit: cover;
+    border: 6px solid rgba(0, 6, 3, 0.763);
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    position:absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Navigation BOX*/
+nav {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #6ca197;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* NAVIGATION */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+    position: relative;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(19, 70, 73);
+    font-size: 16px;
+    font-family: "Calibri", sans-serif;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    color: #f9f9f9;
+    transform: scale(1.1); 
+}
+
+/*ANIMATION NOT MINE*/
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #086530;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Fade-in Navigation Items with Delay */
+.nav-links li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.nav-links li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.nav-links li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-links li:not(:last-child)::after {
+    content: '|'; 
+    color: #030000; 
+    font-weight: bold; 
+    
+}
+
+
+/* PROFILE & MENU ITEMS */
+.profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+   
+}
+
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* DR MENU ITEMS */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 10;
+    
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    text-align: left;
+    font-family: 'calibri';
+    font-weight: bold;
+
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.profile-container:hover .dropdown {
+    display: block;
+}
+
+/* MAIN INFORMATIONS */
+.title{
+    
+    font-family: "Consolas", "Courier New", monospace;
+    color: #03493b;
+}
+
+.contact-container{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align: left;
+}
+.Information {
+    padding: 40px; 
+    margin: 30px auto;
+    max-width: 90%; 
+    min-height: 500px; 
+    border: 3px solid rgba(4, 36, 57, 0.897);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+
+.contact-form {
+    padding-top: 10px;
+    text-align: left; 
+    font-family: 'Calibri', sans-serif; 
+    font-size: 14px;
+}
+
+
+.contact-container h2, 
+.contact-container p {
+    text-align: center; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%; 
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    outline: none; /* Removes blue outline */
+    transition: border 0.3s ease-in-out;
+}
+
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border: 1px solid #007bff; 
+}
+
+/* PLACEHOLDER NOT MINE*/
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    color: #666;
+    font-size: 14px;
+}
+
+/* BUTTON  */
+.contact-btn, 
+.send-btn {
+    width: 100%; 
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.contact-btn:hover, 
+.send-btn:hover {
+    background-color: #0056b3;
+}
+
+/* DISABLE TEXTAREA RESIZING */
+textarea {
+    resize: none;
+}
