@@ -1,2 +1,2 @@
 # final-project (group)
-#process of our final project 
+#progress of our final project 
